@@ -80,7 +80,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="菇菇" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KtX-Ys-ptg">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KtX-Ys-ptg">
                                 <rect key="frame" x="135" y="303" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -213,6 +213,7 @@
                         <outlet property="mySentense" destination="4tG-wx-mRN" id="bQc-Bi-D3H"/>
                         <outlet property="pitchLabel" destination="Gbn-jh-Mtr" id="jjB-fj-Nly"/>
                         <outlet property="pitchSlide" destination="qVM-9a-Fll" id="e2J-Wt-Ld6"/>
+                        <outlet property="sentenseSwitch" destination="gV0-Fz-Cg9" id="VXp-5e-b3f"/>
                         <outlet property="speedLabel" destination="uYP-vf-sXI" id="byt-P2-MCa"/>
                         <outlet property="speedSlide" destination="wA2-sS-oHI" id="F0J-Rr-87a"/>
                     </connections>

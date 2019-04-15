@@ -17,8 +17,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var bigImage: UIImageView!
     @IBOutlet weak var mySentense: UITextField!
+    @IBOutlet weak var sentenseSwitch: UISwitch!
     
-    var sentense: String = "你個大撒子"
+    var sentense: String = ""
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -54,17 +55,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     @IBAction func randomSentense(_ sender: UISwitch) {
         if(sender.isOn){
-            var number = Int.random(in: 0...2)
-            number = Int.random(in: 0...2)
-            if(number==0){
-                sentense = "你好"
-            }
-            else if(number==1){
-                sentense = "hello, how are you."
-            }
-            else{
-                sentense = "你叫什麼名字"
-            }
+
         }
         else{
             sentense = mySentense.text!
@@ -72,6 +63,25 @@ class ViewController: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func trainingButton(_ sender: UIButton){
+        if(sentenseSwitch.isOn){
+            var number = Int.random(in: 0...4)
+            number = Int.random(in: 0...4)
+            if(number==0){
+                sentense = "你好"
+            }
+            else if(number==1){
+                sentense = "你個大撒子"
+            }
+            else if(number==2){
+                sentense = "都不哄哄人家"
+            }
+            else if(number==3){
+                sentense = "Ｄo you want coffee, tea, or me?"
+            }
+            else{
+                sentense = "嚶嚶嚶，人家拿小拳拳捶你胸口"
+            }
+        }
         let speechUtterance = AVSpeechUtterance(string: sentense)
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
         speechUtterance.pitchMultiplier = pitchSlide.value
