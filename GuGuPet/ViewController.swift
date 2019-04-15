@@ -54,12 +54,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func randomSentense(_ sender: UISwitch) {
-        if(sender.isOn){
-
-        }
-        else{
-            sentense = mySentense.text!
-        }
     }
     
     @IBAction func trainingButton(_ sender: UIButton){
@@ -81,6 +75,10 @@ class ViewController: UIViewController , UITextFieldDelegate{
             else{
                 sentense = "嚶嚶嚶，人家拿小拳拳捶你胸口"
             }
+            
+        }
+        else{
+            sentense = mySentense.text!
         }
         let speechUtterance = AVSpeechUtterance(string: sentense)
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
